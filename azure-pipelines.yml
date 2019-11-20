@@ -12,6 +12,6 @@ pool:
 steps:
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(login.html)'
+    rootFolderOrFile: '$(C:\Users\klu\Desktop\login.html)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
