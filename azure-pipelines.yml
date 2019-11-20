@@ -15,4 +15,4 @@ steps:
     rootFolderOrFile: '$(C:\Users\klu\Desktop\login.html)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
--script: python -mhtml login.html
+- script: python -mhtml login.html
