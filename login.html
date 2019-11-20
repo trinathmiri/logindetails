@@ -1,47 +1,44 @@
+<!doctype html>
 <html>
-<head>
-<title>Login Page</title>
-</head>
-<body>
-<form name="loginForm" method="post" action="login.php">
-<table width="20%" bgcolor="0099CC" align="center">
+    <head>
+        <style type="text/css">
 
-<tr>
-<td colspan=2><center><font size=4><b>HTML Login Page</b></font></center></td>
-</tr>
+            body {font-family:Arial, Sans-Serif;}
 
-<tr>
-<td>Username:</td>
-<td><input type="text" size=25 name="userid"></td>
-</tr>
+            #container {width:300px; margin:0 auto;}
 
-<tr>
-<td>Password:</td>
-<td><input type="Password" size=25 name="pwd"></td>
-</tr>
+            /* Nicely lines up the labels. */
+            form label {display:inline-block; width:140px;}
 
-<tr>
-<td ><input type="Reset"></td>
-<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
-</tr>
+            /* You could add a class to all the input boxes instead, if you like. That would be safer, and more backwards-compatible */
+            form input[type="text"],
+            form input[type="password"],
+            form input[type="email"] {width:160px;}
 
-</table>
-</form>
-<script language="javascript">
-function check(form)
-{
+            form .line {clear:both;}
+            form .line.submit {text-align:right;}
 
-if(form.userid.value == "Roseindia" && form.pwd.value == "Roseindia")
-{
-	return true;
-}
-else
-{
-	alert("Error Password or Username")
-	return false;
-}
-}
-</script>
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form>
+                <h1>Create Logon</h1>
+                <div class="line"><label for="username">Username *: </label><input type="text" id="username" /></div>
+                <div class="line"><label for="pwd">Password *: </label><input type="password" id="pwd" /></div>
+                <!-- You may want to consider adding a "confirm" password box also -->
+                <div class="line"><label for="surname">Surname *: </label><input type="text" id="surname" /></div>
+                <div class="line"><label for="other_names">Other Names *: </label><input type="text" id="names" /></div>
+                <div class="line"><label for="dob">Date of Birth *: </label><input type="text" id="dob" /></div>
+                <div class="line"><label for="email">Email *: </label><input type="email" id="email" /></div>
+                <!-- Valid input types: http://www.w3schools.com/html5/html5_form_input_types.asp -->
+                <div class="line"><label for="tel">Telephone: </label><input type="text" id="tel" /></div>
+                <div class="line"><label for="add">Address *: </label><input type="text" id="add" /></div>
+                <div class="line"><label for="ptc">Post Code *: </label><input type="text" id="ptc" /></div>
+                <div class="line submit"><input type="submit" value="Submit" /></div>
 
-</body>
+                <p>Note: Please make sure your details are correct before submitting form and that all fields marked with * are completed!.</p>
+            </form>
+        </div>
+    </body>
 </html>
